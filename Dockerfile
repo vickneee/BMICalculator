@@ -26,7 +26,6 @@ COPY target/bmi_calculator.jar /app/app.jar
 # Force software rendering (avoid ES2 crash)
 ENV JAVAFX_PRISM_SW=true
 
-
 # Use host X11 display
 ENV DISPLAY=:0
 
