@@ -137,7 +137,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>bmi.bmicalculator.HelloApplication</mainClass> <!-- Correct main class -->
+                                    <mainClass>bmi.bmicalculator.Launcher</mainClass> <!-- Correct main class -->
                                 </transformer>
                             </transformers>
                         </configuration>
