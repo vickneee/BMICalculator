@@ -63,12 +63,12 @@ public class HelloController {
 
     @FXML
     public void onURClick() {
-        onLoadLanguage("ur", "PA"); // Persia
+        onLoadLanguage("ur", "PA"); // Urdu
     }
 
     @FXML
     public void onVIClick() {
-        onLoadLanguage("vi", "VI"); // Finnish
+        onLoadLanguage("vi", "VI"); // Vietnamese
     }
 
     @FXML
@@ -90,7 +90,8 @@ public class HelloController {
     }
 
     public double calculateBMI(double w, double h) {
-        double height = h /100.0;
-        return w / (height * height);
+        double height = h / 100.0;
+        double result =  w / (height * height);
+        return Math.round(result * 100.0) / 100.0;
     }
 }
