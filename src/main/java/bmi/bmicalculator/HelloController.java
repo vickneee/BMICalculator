@@ -79,7 +79,7 @@ public class HelloController {
             double height = Double.parseDouble(tfHeight.getText());
 
             double bmi = calculateBMI(weight, height);
-            System.out.println("Message: " + getMessage("lblResult.text"));
+            // System.out.println("Message: " + getMessage("lblResult.text"));
 
             String msg = getMessage("lblResult.text");
             lblResult.setText(msg + " " + bmi);
