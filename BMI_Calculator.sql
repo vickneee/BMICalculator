@@ -26,7 +26,7 @@ INSERT INTO localization_strings (`key`, value, language) VALUES
 ('height', 'Height (cm)', 'en'),
 ('calculate', 'Calculate BMI', 'en'),
 ('result', 'Your BMI is', 'en'),
-('invalid', 'Invalid input'),
+('invalid', 'Invalid input', 'en'),
 ('localTime', 'Local Time', 'en');
 
 -- French
@@ -55,3 +55,6 @@ INSERT INTO localization_strings (`key`, value, language) VALUES
 ('result', 'آپ کا BMI ہے', 'ur'),
 ('invalid', 'غلط ان پٹ', 'ur'),
 ('localTime', 'مقامی وقت', 'ur');
+
+
+SELECT * FROM localization_strings;
