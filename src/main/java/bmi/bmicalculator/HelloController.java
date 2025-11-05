@@ -5,6 +5,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
+import java.text.DecimalFormat;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -79,10 +80,15 @@ public class HelloController {
             double height = Double.parseDouble(tfHeight.getText());
 
             double bmi = calculateBMI(weight, height);
-            // System.out.println("Message: " + getMessage("lblResult.text"));
+
+            DecimalFormat df = new DecimalFormat("#0.00");
 
             String msg = getMessage("lblResult.text");
-            lblResult.setText(msg + " " + bmi);
+            lblResult.setText(msg + " " + df.format(bmi));
+
+            // Save to database
+            String language = Locale.getDefault().getLanguage(); // or store current locale
+            BMIResultService.saveResult(weight, height * 100, bmi, language);
 
         } catch (NumberFormatException e) {
             lblResult.setText(getMessage("lblInvalid.text"));
