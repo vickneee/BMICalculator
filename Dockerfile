@@ -1,5 +1,5 @@
 # Stage
-FROM openjdk:17-jdk-slim
+# FROM openjdk:17-jdk-slim
 # That image tag used to exist but was recently renamed
 FROM eclipse-temurin:17-jdk-jammy
 
