@@ -86,10 +86,6 @@ public class HelloController {
             String msg = getMessage("lblResult.text");
             lblResult.setText(msg + " " + df.format(bmi));
 
-            // Save to database
-            String language = Locale.getDefault().getLanguage(); // or store current locale
-            BMIResultService.saveResult(weight, height * 100, bmi, language);
-
         } catch (NumberFormatException e) {
             lblResult.setText(getMessage("lblInvalid.text"));
         }
